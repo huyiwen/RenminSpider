@@ -60,7 +60,7 @@ def wx_alert(title: str, msg:str, uid: str, appToken: str, url: Optional[str] = 
         "content": f"<h1>{title}</h1><br/><p>{msg}</p>",
         "summary": msg,
         "contentType": 2,
-        "uids": [uid],
+        "topicIds": [uid],
         "url": url,
     })
 

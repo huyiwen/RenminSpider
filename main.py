@@ -176,6 +176,7 @@ class RUCSpider(object):
 
         with open(self.setting_file, "r", encoding = 'utf-8') as f:
             info = yaml.load(f, Loader=yaml.FullLoader)
+        wx_alert(title="监控开始", msg=f"{info['username']}监控开始", uid=info["wxpusher_uid"], appToken=info["wxpusher_appToken"])
 
         if info['username'] == None:
             self.logger.critical('username is empty, please fill in your id in your setting file!')
